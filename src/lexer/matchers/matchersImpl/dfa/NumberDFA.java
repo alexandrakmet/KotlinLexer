@@ -42,12 +42,10 @@ public class NumberDFA implements IMatcher {
                     continue;
                 case 2:
                     if (Character.isDigit(curChar) || curChar == '_') {
-                        result = new Token(TokenType.INT, text.substring(position, curPosition), position, curPosition);
                         state = 3;
                     } else if (curChar == 'L') {
                         return new Token(TokenType.LONG, text.substring(position, curPosition), position, curPosition);
                     } else if (curChar == '.') {
-                        result = new Token(TokenType.INT, text.substring(position, curPosition), position, curPosition);
                         state = 6;
                     } else if (curChar == 'F' || curChar == 'f') {
                         return new Token(TokenType.FLOAT, text.substring(position, curPosition), position, curPosition);
@@ -61,6 +59,7 @@ public class NumberDFA implements IMatcher {
                     } else return result;
                 case 4:
                     if (Character.isDigit(curChar) || curChar == '_') {
+                        result = new Token(TokenType.INT, text.substring(position, curPosition), position, curPosition);
                         continue;
                     } else if (curChar == 'L') {
                         return new Token(TokenType.LONG, text.substring(position, curPosition), position, curPosition);
