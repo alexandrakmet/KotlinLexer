@@ -24,7 +24,7 @@ public class HexBinNumberMatcher implements IMatcher {
             if (type == TokenType.HEX && text.substring(position, curPos).matches("[-+]?0[xX][0-9a-fA-F]+([eE]([-+]?[0-9]+)?)?")) {
                 resPosition = curPos;
             }
-            if (type == TokenType.BIN &&text.substring(position, curPos).matches("[-+]?0[bB][01]+([eE]([-+]?[0-9]+)?)?")) {
+            if (type == TokenType.BIN && text.substring(position, curPos).matches("[-+]?0[bB][01]+([eE]([-+]?[0-9]+)?)?")) {
                 resPosition = curPos;
             }
         }

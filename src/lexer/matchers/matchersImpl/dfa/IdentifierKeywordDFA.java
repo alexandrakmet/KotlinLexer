@@ -1,9 +1,9 @@
 package lexer.matchers.matchersImpl.dfa;
 
 import lexer.matchers.IMatcher;
+import lexer.matchers.MatchersUtils;
 import lexer.token.Token;
 import lexer.token.TokenType;
-import lexer.matchers.MatchersUtils;
 
 public class IdentifierKeywordDFA implements IMatcher {
     @Override

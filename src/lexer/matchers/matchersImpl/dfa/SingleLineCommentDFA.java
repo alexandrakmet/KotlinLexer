@@ -30,6 +30,6 @@ public class SingleLineCommentDFA implements IMatcher {
                     }
             }
         }
-        return state == 2? new Token(TokenType.COMMENT, text.substring(position, curPosition), position, curPosition) : null;
+        return state == 2 ? new Token(TokenType.COMMENT, text.substring(position, curPosition), position, curPosition) : null;
     }
 }

@@ -18,7 +18,7 @@ public class Main {
             while ((t = reader.readLine()) != null)
                 input.append(t).append('\n');
             reader.close();
-        } catch (IOException exception){
+        } catch (IOException exception) {
             System.out.println(exception.getMessage());
         }
         return input.toString();
