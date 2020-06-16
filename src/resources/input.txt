@@ -1,0 +1,26 @@
+import lexer.token
+
+val items = listOf("apple", "banana", "kiwifruit")
+var index = 0
+while (index < items.size) {
+    println("item at $index is ${items[index]}")
+    index++
+}
+/*
+comment line 1
+comment line 2
+*/
+
+fun getStringLength(obj: Any): Int? {
+    if (obj is String) {
+        // `obj` is automatically cast to `String` in this branch
+        return obj.length
+    }
+    // `obj` is still of type `Any` outside of the type-checked branch
+    return null
+}
+
+when {
+    "orange" in items -> println("juicy")
+    "apple" in items -> println("apple is fine too")
+}
